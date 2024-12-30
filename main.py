@@ -1,6 +1,3 @@
-import json
-
-
 class Category:
     name: str
     description: str
@@ -23,7 +20,6 @@ class Category:
     def products(self):
         for i in self.__products:
             return f"{i.name}, {i.price} руб. Остаток: {i.amount_available} шт."
-
 
 
 class Product:
@@ -63,4 +59,3 @@ class Product:
                 print("Действие отменено.")
         else:
             self._price = new_price
-

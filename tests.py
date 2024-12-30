@@ -12,7 +12,7 @@ def hamburger_product():
 def test_init_category(McDonald_category):
     assert McDonald_category.name == 'Mcdonalds'
     assert McDonald_category.description == 'Mcdonalds food'
-    assert McDonald_category.products == ["McFlurry", "French fries", "Hamburger"]
+    assert McDonald_category.__products == ["McFlurry", "French fries", "Hamburger"]
     assert Category.total_categories == 1
     assert Category.total_unique_products == 3
 
