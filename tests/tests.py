@@ -1,5 +1,5 @@
 import pytest
-from main import Category, Product
+from src.main import Category, Product
 @pytest.fixture
 def McDonald_category():
     return Category('Mcdonalds','Mcdonalds food', ["McFlurry", "French fries", "Hamburger"])
