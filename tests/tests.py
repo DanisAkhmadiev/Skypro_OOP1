@@ -1,18 +1,21 @@
 import pytest
 from src.main import Category, Product
+
+
 @pytest.fixture
-def McDonald_category():
-    return Category('Mcdonalds','Mcdonalds food', ["McFlurry", "French fries", "Hamburger"])
+def mcdonald_category():
+    return Category('Mcdonalds', 'Mcdonalds food', ["McFlurry", "French fries", "Hamburger"])
+
 
 @pytest.fixture
 def hamburger_product():
-    return  Product('Hamburger','just burger', 23, 300)
+    return Product('Hamburger', 'just burger', 23, 300)
 
 
-def test_init_category(McDonald_category):
-    assert McDonald_category.name == 'Mcdonalds'
-    assert McDonald_category.description == 'Mcdonalds food'
-    assert McDonald_category.__products == ["McFlurry", "French fries", "Hamburger"]
+def test_init_category(mcdonald_category):
+    assert mcdonald_category.name == 'Mcdonalds'
+    assert mcdonald_category.description == 'Mcdonalds food'
+    assert mcdonald_category.products == ["McFlurry", "French fries", "Hamburger"]
     assert Category.total_categories == 1
     assert Category.total_unique_products == 3
 
